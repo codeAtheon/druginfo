@@ -55,18 +55,25 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-    			<groupId>io.github.bonigarcia</groupId>
-    			<artifactId>webdrivermanager</artifactId>
-   			<version>3.6.2</version>
-   			<scope>test</scope>
-		</dependency>
+		 <dependency>
+   			<groupId>org.seleniumhq.selenium</groupId>
+  			 <artifactId>selenium-server</artifactId>
+   			<version>3.14.0</version>
+ 		</dependency>
+
 		<dependency>
     			<groupId>org.seleniumhq.selenium</groupId>
-  			<artifactId>selenium-server</artifactId>
-  			<version>3.141.5</version>
+    			<artifactId>selenium-chrome-driver</artifactId>
+   			 <version>3.141.59</version>
 		</dependency>
 
+        
+     		<dependency>
+  			 <groupId>io.github.bonigarcia</groupId>
+   			<artifactId>webdrivermanager</artifactId>
+   			<version>3.0.0</version>
+   			<scope>test</scope>
+		</dependency> 
 
 		<dependency>
 			<groupId>com.h2database</groupId>
