@@ -10,21 +10,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SpringbootTest1 {
 	static WebDriver driver;
 
-	@BeforeClass
-
+/*@BeforeClass
     public static void setupClass() {
 
-        WebDriverManager.chromedriver().setup();
+        
 
     }
     @Before
 
     public void setupTest() {
 
-        driver = new ChromeDriver();
+        
 
-    }
-	@After
+    }*/
+	/*@After
 
     public void teardown() {
 
@@ -34,12 +33,13 @@ public class SpringbootTest1 {
 
         }
 
-    }
+    }*/
 
 	@Test
 
 	public void test() throws InterruptedException {
-
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 
 	// driver = new ChromeDriver();
