@@ -1,4 +1,4 @@
-import static org.junit.Assert.*;
+/*import static org.junit.Assert.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -36,3 +36,4 @@ public class SpringbootTest1 {
 	}
 
 }
+*/
