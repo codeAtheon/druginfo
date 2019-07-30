@@ -10,11 +10,39 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SpringbootTest1 {
 	static WebDriver driver;
 
+	@BeforeClass
+
+    public static void setupClass() {
+
+        WebDriverManager.chromedriver().setup();
+
+    }
+    @Before
+
+    public void setupTest() {
+
+        driver = new ChromeDriver();
+
+    }
+	@After
+
+    public void teardown() {
+
+        if (driver != null) {
+
+            driver.quit();
+
+        }
+
+    }
+
 	@Test
+
 	public void test() throws InterruptedException {
-		
-		System.setProperty("webdriver.chrome.driver", "D:\\Users\\C-PN19\\Downloads\\chromedriver.exe");
-	 driver = new ChromeDriver();
+
+		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+
+	// driver = new ChromeDriver();
 	 driver.get("http://localhost:8020");
 	 driver.manage().window().maximize();
 	 driver.findElement(By.xpath("/html/body/div/nav/div/div/ul/li[2]/a")).click();
