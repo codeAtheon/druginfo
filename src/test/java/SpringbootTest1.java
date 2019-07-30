@@ -38,7 +38,7 @@ public class SpringbootTest1 {
 	@Test
 
 	public void test() throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 
