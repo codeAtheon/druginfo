@@ -1,4 +1,4 @@
-import static org.junit.Assert.*;
+/*import static org.junit.Assert.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SpringbootTest1 {
 	static WebDriver driver;
 
-/*@BeforeClass
+@BeforeClass
     public static void setupClass() {
 
         
@@ -22,7 +22,7 @@ public class SpringbootTest1 {
 
         
 
-    }*/
+    }
 	/*@After
 
     public void teardown() {
@@ -33,7 +33,7 @@ public class SpringbootTest1 {
 
         }
 
-    }*/
+    }
 
 	@Test
 
@@ -60,4 +60,4 @@ public class SpringbootTest1 {
 	 
 	}
 
-}
+}*/
