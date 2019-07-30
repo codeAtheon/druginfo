@@ -51,4 +51,18 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-test.finalizedBy jacocoTestReport
+test {
+ testLogging {
+   exceptionFormat = 'full'
+   events = ["passed", "failed", "skipped"]
+ }
+ finalizedBy jacocoTestReport
+}
+jacocoTestReport{
+ group = "build"
+ reports {
+   xml.enabled false
+   csv.enabled false
+   html.destination file("${buildDir}/jacocoHtml")
+ }
+}
