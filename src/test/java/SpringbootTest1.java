@@ -1,4 +1,4 @@
-/*import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -6,43 +6,18 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SpringbootTest1 {
-	static WebDriver driver;
-
-@BeforeClass
-    public static void setupClass() {
-
-        
-
-    }
-    @Before
-
-    public void setupTest() {
-
-        
-
-    }
-	/*@After
-
-    public void teardown() {
-
-        if (driver != null) {
-
-            driver.quit();
-
-        }
-
-    }
+	private WebDriver driver;
 
 	@Test
-
 	public void test() throws InterruptedException {
-		//WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-
-	// driver = new ChromeDriver();
+		
+		
+		System.setProperty("wdm.chromeDriverVersion", "75.0.3770.140");
+		WebDriverManager.chromedriver().setup();
+	 driver = new ChromeDriver();
 	 driver.get("http://localhost:8020");
 	 driver.manage().window().maximize();
 	 driver.findElement(By.xpath("/html/body/div/nav/div/div/ul/li[2]/a")).click();
@@ -60,4 +35,4 @@ public class SpringbootTest1 {
 	 
 	}
 
-}*/
+}
