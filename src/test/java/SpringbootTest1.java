@@ -1,4 +1,4 @@
-/*import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,8 +15,8 @@ public class SpringbootTest1 {
 	public void test() throws InterruptedException {
 		
 		
-		System.setProperty("wdm.chromeDriverVersion", "75.0.3770.140");
-		WebDriverManager.chromedriver().setup();
+	 System.setProperty("wdm.chromeDriverVersion", "75.0.3770.140");
+	 WebDriverManager.chromedriver().setup();
 	 driver = new ChromeDriver();
 	 driver.get("http://localhost:8020");
 	 driver.manage().window().maximize();
@@ -36,4 +36,4 @@ public class SpringbootTest1 {
 	}
 
 }
-*/
+
