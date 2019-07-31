@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: codeathonapp
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: codeathonapp
+    spec:
+      containers:
+      - name: codeathonapp1
+        image: webapp:1
+        # for local development against minikube registry
+        #imagePullPolicy: Never        
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: codeathonapp-service
+  labels:
+    app: codeathonapp-service
+spec:
+  type: NodePort
+  ports:
+    # the port that this service should serve on
+    - port: 8080
+  # label keys and values that must match in order to receive traffic for this service
+  selector:
+    app: codeathonapp
