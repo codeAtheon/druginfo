@@ -1,7 +1,10 @@
-FROM ibmjava:8-sfj
-LABEL maintainer="IBM Java Engineering at IBM Cloud"
-
-COPY target/productsinventory-1.0-SNAPSHOT.jar /app.jar
-
-ENV JAVA_OPTS=""
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
+FROM java:8-jdk-alpine
+RUN /bin/sh -c "apk add --no-cache bash"
+COPY target/productsinventory-1.0-SNAPSHOT.jar /usr/app
+WORKDIR /usr/app
+RUN ls -a
+RUN bash ./gradlew build
+#COPY build/libs/gs-spring-boot-0.1.0.jar /usr/app/
+#WORKDIR /usr/app
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","productsinventory-1.0-SNAPSHOT.jar"]
