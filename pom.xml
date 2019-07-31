@@ -55,18 +55,8 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<dependency>
-		    <groupId>org.seleniumhq.selenium</groupId>
-		    <artifactId>selenium-java</artifactId>
-		    <version>2.53.0</version>
-		</dependency>
-		<dependency>
-   			<groupId>org.seleniumhq.selenium</groupId>
-   			 <artifactId>selenium-server-standalone</artifactId>
-  			  <version>2.46.0</version>
-		</dependency>
-
+		
+		
 		 <dependency>
    			<groupId>org.seleniumhq.selenium</groupId>
   			 <artifactId>selenium-server</artifactId>
